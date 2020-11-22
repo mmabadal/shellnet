@@ -20,7 +20,38 @@ If you found this paper useful in your research, please cite:
 ## Installation
 The code is based on [PointCNN](https://github.com/yangyanli/PointCNN). Please install [TensorFlow](https://www.tensorflow.org/install/), and follow the instruction in [PointNet++](https://github.com/charlesq34/pointnet2) to compile the customized TF operators in the `tf_ops` folder.  
 
-The code has been tested with Python 3.6, TensorFlow 1.13.2, CUDA 10.0 and cuDNN 7.3 on Ubuntu 14.04.
+The code has been tested with Python 3.6, TensorFlow 1.13.2, CUDA 10.0 and cuDNN 7.3 on Ubuntu 16.04.
+
+INSTALL FROM: https://medium.com/repro-repo/install-cuda-and-cudnn-for-tensorflow-gpu-on-ubuntu-79306e4ac04e
+
+ 
+- Clone the repository 
+```
+git clone https://github.com/mmabadal/shellnet
+```
+- Setup python environment
+
+---- ANACONDA ---- 
+
+download anaconda (end of page): https://www.anaconda.com/products/individual#linux
+
+install conda dependencies and anaconda (https://docs.anaconda.com/anaconda/install/linux/)
+
+$ sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+$ bash ~/Downloads/Anaconda3-2020.02-Linux-x86_64.sh
+
+you can deactivate the auto base environment on new shell
+$ conda config --set auto_activate_base false
+
+create conda env
+
+conda create --name shellnet python=3.6
+
+conda activate shellnet
+
+
+### ADD compile the customized TF operators in the `tf_ops` folder FROM PC SALON, PERO ERA ALGO COMO BUSCAR COMO SE COMPILA UN .NOSEQUE (.OPS) LO QUE HAYA EN LA CARPETA QUE INDICA ARRIBA) Y EJECUTARLO Y YA
+
 
 ## Code Explanation
 The core convolution, ShellConv, and the neural network, ShellNet, are defined in [shellconv.py](shellconv.py).
